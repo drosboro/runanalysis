@@ -13,6 +13,8 @@ _NOTE: this section is taken directly from the readme contained in the raw data 
 Data Description
 ----------------
 
+### Columns
+
 There are two datasets created in this analysis.  The first (`tidy_data.txt`) is a tidied subset of the raw data gathered by Anquita, et al (2012).  The second (`tidy_summary.txt`) records the averages for each variable, by `subject` (participant id) and `activity`.
 
 The datasets contain a subset of the 561 variables measured in the original dataset.  The complete set of variables are described in the original dataset (`./UCI HAR Dataset/features_info.txt`).  The following descriptions are a quote from that document:
@@ -51,7 +53,11 @@ In the original data set, a variety of calculations were performed on the raw da
 
 represent the mean and standard deviation, respectively, of the body acceleration in the X direction.
 
-The rows in the tidy data sets are indexed by `subject` (the number assigned to the volunteer) and `activity_name`, one of the six activities described above (e.g. WALKING, WALKING_UPSTAIRS, and so on).  In `tidy_data.txt`, each row represents a calculated mean or standard deviation for each measurement type, over a specified window of time.  In `tidy_summary.txt`, each row represents the mean of all calculations (mean or standard deviation) for that particular subject and activity - so there is exactly one row for each subject-activity pair.
+*NOTE:* Unfortunately, the provided raw data does not explicity state the units of the measurements.  So, while I could guess at units, I wouldn't want to here.
+
+### Rows
+
+The rows in the tidy data sets are indexed by `subject` (the number assigned to the volunteer) and `activity_name`, one of the six activities described above (e.g. WALKING, WALKING_UPSTAIRS, and so on).  In `tidy_data.txt`, each row represents a calculated mean or standard deviation for each measurement type, over a specified window of time (as described in the Study Design section above).  In `tidy_summary.txt`, each row represents the mean of all calculations (mean or standard deviation) for that particular subject and activity - so there is exactly one row for each subject-activity pair.
 
 References
 ----------
